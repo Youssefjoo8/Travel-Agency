@@ -1,0 +1,1396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+   --main-color: #0F172A;
+   /* Deep Indigo */
+   --secondary-color: #F59E0B;
+   /* Amber for accents */
+   --indigo: #0F172A;
+   --amber: #F59E0B;
+   --text-light: #F8FAFC;
+   --black: #222;
+   --white: #fff;
+   --light-black: #777;
+   --light-white: #fff9;
+   --dark-bg: rgba(0, 0, 0, .7);
+   --light-bg: #eee;
+   --border: .1rem solid var(--main-color);
+   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+   --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+}
+
+[data-theme="dark"] {
+   --black: #fff;
+   --white: #0F172A;
+   /* Dark mode bg matches primary */
+   --light-bg: #1e293b;
+   --light-black: #F8FAFC;
+   /* High contrast text */
+   --box-shadow: 0 .5rem 1rem rgba(255, 255, 255, .1);
+   --text-shadow: 0 1.5rem 3rem rgba(255, 255, 255, .3);
+}
+
+#theme-btn {
+   font-size: 2.5rem;
+   cursor: pointer;
+   color: var(--black);
+   margin-left: 2rem;
+}
+
+#theme-btn:hover {
+   color: var(--amber);
+}
+
+* {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+body {
+   background-color: var(--white);
+   color: var(--black);
+   transition: background-color 0.3s, color 0.3s;
+}
+
+a,
+button,
+.btn {
+   transition: all 0.4s linear;
+}
+
+a:hover {
+   color: var(--amber) !important;
+}
+
+/* Ensure icons in footer/stats turn amber on hover */
+.footer .box a:hover i,
+.stats .box:hover i {
+   color: var(--amber);
+   padding-right: 2rem;
+   /* existing animation */
+}
+
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+   width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+   background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb {
+   background-color: var(--main-color);
+}
+
+section {
+   padding: 5rem 10%;
+}
+
+@keyframes fadeIn {
+   0% {
+      transform: scale(0);
+      opacity: 0;
+   }
+}
+
+.heading {
+   background-size: cover !important;
+   background-position: center !important;
+   padding-top: 10rem;
+   padding-bottom: 15rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.heading h1 {
+   font-size: 10rem;
+   text-transform: uppercase;
+   color: var(--white);
+   text-shadow: var(--text-shadow);
+}
+
+.btn {
+   display: inline-block;
+   background: var(--main-color);
+   margin-top: 1rem;
+   color: var(--white);
+   font-size: 1.7rem;
+   padding: 1rem 3rem;
+   cursor: pointer;
+}
+
+.btn:hover {
+   background: var(--amber);
+}
+
+.heading-title {
+   text-align: center;
+   margin-bottom: 3rem;
+   font-size: 6rem;
+   text-transform: uppercase;
+   color: var(--black);
+}
+
+.header {
+   position: sticky;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
+   background-color: var(--white);
+   display: flex;
+   padding-top: 0rem;
+   padding-bottom: 0rem;
+   box-shadow: var(--box-shadow);
+   align-items: center;
+   justify-content: space-between;
+}
+
+.header .logo {
+   font-size: 2.5rem;
+   color: var(--main-color);
+   text-transform: uppercase;
+}
+
+.header .navbar a {
+   font-size: 2rem;
+   margin-left: 2rem;
+   color: var(--main-color);
+   text-transform: uppercase;
+}
+
+.header .navbar a:hover {
+   color: var(--amber);
+}
+
+#menu-btn {
+   font-size: 2.5rem;
+   cursor: pointer;
+   color: var(--black);
+   display: none;
+}
+
+
+
+
+.home {
+   padding: 0;
+}
+
+.home .slide {
+   text-align: center;
+   padding: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-size: cover !important;
+   background-position: center !important;
+   min-height: 60rem;
+}
+
+.home .slide .content {
+   width: 85rem;
+   display: none;
+}
+
+.home .swiper-slide-active .content {
+   display: inline-block;
+}
+
+.home .slide .content span {
+   display: block;
+   font-size: 2.2rem;
+   padding-bottom: 1rem;
+   animation: fadeIn .2s linear backwards .2s;
+}
+
+.home .slide .content h3 {
+   font-size: 5vw;
+   color: var(--white);
+   text-transform: uppercase;
+   line-height: 1;
+   text-shadow: var(--text-shadow);
+   padding: 1rem 0;
+   animation: fadeIn .2s linear backwards .4s;
+}
+
+.home .slide .content .btn {
+   animation: fadeIn .2s linear backwards .6s;
+}
+
+.home .swiper-button-next,
+.home .swiper-button-prev {
+   height: 5rem;
+   width: 5rem;
+   background: var(--tomato);
+   color: var(--white);
+}
+
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover {
+   background: var(--main-color);
+   color: var(--white);
+}
+
+.home .swiper-button-next::after,
+.home .swiper-button-prev::after {
+   font-size: 2rem;
+}
+
+.home .swiper-button-prev {
+   right: 7rem;
+}
+
+.services .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+   gap: 1.5rem;
+}
+
+.partner .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+   gap: 3rem;
+}
+
+.services .box-container .box {
+   padding: 3rem 2rem;
+   text-align: center;
+   background: var(--main-color);
+   cursor: pointer;
+}
+
+.services .box-container .box:hover {
+   background: var(--tomato);
+}
+
+.services .box-container .box img {
+   height: 7rem;
+}
+
+.services .box-container .box h3 {
+   color: var(--white);
+   font-size: 1.7rem;
+   padding-top: 1rem;
+}
+
+.home-about {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.home-about .image {
+   flex: 1 1 41rem;
+}
+
+.home-about .image img {
+   width: 100%;
+}
+
+.home-about .content {
+   flex: 1 1 41rem;
+   padding: 3rem;
+   background: var(--light-bg);
+}
+
+.home-about .content h3 {
+   font-size: 3rem;
+   color: var(--black);
+}
+
+.home-about .content p {
+   font-size: 1.5rem;
+   padding: 1rem 0;
+   line-height: 2;
+   color: var(--black);
+   text-align: justify;
+}
+
+.services .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+   gap: 1.5rem;
+}
+
+.services .box-container .box {
+   padding: 2rem;
+   text-align: center;
+   background: var(--main-color);
+   cursor: pointer;
+   transition: .2s linear;
+}
+
+.services .box-container .box:hover {
+   background: var(--amber);
+}
+
+.services .box-container .box img {
+   height: 7rem;
+   margin-bottom: 1rem;
+   filter: brightness(0) invert(1);
+   /* White icons on Indigo/Amber */
+}
+
+.services .box-container .box h3 {
+   color: var(--white);
+   font-size: 1.7rem;
+   position: relative;
+   z-index: 10;
+}
+
+.home-packages {
+   background: var(--light-bg);
+}
+
+.home-packages .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap: 2rem;
+}
+
+.home-packages .box-container .box {
+   /*  border:var(--border);*/
+   box-shadow: var(--box-shadow);
+   background: var(--white);
+}
+
+.home-packages .box-container .box:hover .image img {
+   transform: scale(1.1);
+}
+
+.home-packages .box-container .box .image {
+   height: 25rem;
+   overflow: hidden;
+}
+
+.home-packages .box-container .box .image img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   transition: .2s linear;
+}
+
+.home-packages .box-container .box .content {
+   padding: 2rem;
+   text-align: center;
+}
+
+.home-packages .box-container .box .content h3 {
+   font-size: 2.5rem;
+   color: var(--black);
+}
+
+.home-packages .box-container .box .content p {
+   font-size: 1.5rem;
+   color: var(--light-black);
+   line-height: 2;
+   padding: 1rem 0;
+}
+
+.home-packages .load-more {
+   text-align: center;
+   margin-top: 2rem;
+}
+
+.home-offer {
+   text-align: center;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+   gap: 3rem;
+}
+
+.home-offer .content {
+   max-width: 70rem;
+   margin: 0 auto;
+}
+
+.home-offer .content h3 {
+   font-size: 3.5rem;
+   text-transform: uppercase;
+   color: var(--black);
+}
+
+.home-offer .content p {
+   font-size: 1.5rem;
+   color: var(--light-black);
+   line-height: 2;
+   padding: 1rem 0;
+   text-align: justify;
+}
+
+.offerimage img {
+   width: 100%;
+}
+
+.about {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 3rem;
+}
+
+.about .image {
+   flex: 1 1 41rem;
+}
+
+.about .image img {
+   width: 100%;
+}
+
+.about .content {
+   flex: 1 1 41rem;
+   text-align: center;
+}
+
+.about .content h3 {
+   font-size: 3rem;
+   color: var(--black);
+}
+
+.about .content p {
+   font-size: 1.5rem;
+   color: var(--light-black);
+   line-height: 2;
+   padding: 1rem 0;
+   text-align: justify;
+}
+
+.about .content .icons-container {
+   margin-top: 2rem;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+   align-items: flex-end;
+}
+
+.about .content .icons-container .icons {
+   background: var(--light-bg);
+   padding: 2rem;
+   flex: 1 1 16rem;
+}
+
+.gallary .container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+}
+
+.gallary .container .box {
+   overflow: hidden;
+   flex: 1 1 30rem;
+   height: 25rem;
+   border-radius: .5rem;
+   border: 1rem solid #fff;
+   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+   position: relative;
+}
+
+.gallary .container .box img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.gallary .container .box .content {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+}
+
+/* Navbar Active State */
+.header .navbar a.active {
+   color: var(--amber);
+   border-bottom: .2rem solid var(--amber);
+   padding-bottom: .5rem;
+}
+
+/* Gallery Overlay Improvements */
+.gallary .container .box .content {
+   position: absolute;
+   top: -100%;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.6);
+   /* Darker overlay for readability */
+   padding: 2rem;
+   padding-top: 5rem;
+   text-align: center;
+   transition: .2s linear;
+}
+
+.gallary .container .box:hover .content {
+   top: 0;
+}
+
+.gallary .container .box .content h3 {
+   font-size: 2.5rem;
+   color: var(--white);
+   /* White text */
+   text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
+}
+
+.gallary .container .box .content p {
+   font-size: 1.5rem;
+   color: var(--white);
+   /* White text */
+   padding: .5rem 0;
+   text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+}
+
+/* Global Button Styles */
+.btn {
+   display: inline-block;
+   background: var(--amber);
+   /* Amber Default */
+   margin-top: 1rem;
+   color: var(--main-color);
+   /* Navy Text */
+   font-weight: bold;
+   font-size: 1.7rem;
+   padding: 1rem 3rem;
+   cursor: pointer;
+   outline: none;
+   border: none;
+   transition: all 0.3s ease;
+}
+
+.btn:hover {
+   background: var(--main-color);
+   /* Navy on Hover */
+   color: var(--white);
+   transform: translateY(-3px);
+   /* Soft lift animation */
+}
+
+.btn:focus {
+   outline: none;
+   box-shadow: none;
+}
+
+.about .content .icons-container .icons i {
+   font-size: 4rem;
+   margin-bottom: 2rem;
+   color: var(--main-color);
+}
+
+.about .content .icons-container .icons span {
+   font-size: 1.5rem;
+   color: var(--light-black);
+   display: block;
+}
+
+.reviews {
+   background: var(--light-bg);
+}
+
+.reviews .slide {
+   padding: 2rem;
+   border: var(--border);
+   background: var(--white);
+   text-align: center;
+   box-shadow: var(--box-shadow);
+   user-select: none;
+}
+
+.reviews .slide .stars {
+   padding-bottom: .5rem;
+}
+
+.reviews .slide .stars i {
+   font-size: 1.7rem;
+   color: #FFD700;
+   /* Gold stars */
+}
+
+.reviews .slide p {
+   font-size: 1.5rem;
+   color: var(--light-black);
+   line-height: 2;
+   padding: 1rem 0;
+   text-align: justify;
+}
+
+.reviews .slide h3 {
+   font-size: 2rem;
+   color: var(--black);
+}
+
+.reviews .slide span {
+   font-size: 1.5rem;
+   color: var(--main-color);
+   display: block;
+}
+
+.reviews .slide img {
+   height: 7rem;
+   width: 7rem;
+   border-radius: 50%;
+   margin-top: 1rem;
+}
+
+.packages .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
+   gap: 2rem;
+}
+
+.packages .box-container .box {
+   border: var(--border);
+   box-shadow: var(--box-shadow);
+   background: var(--white);
+   display: none;
+}
+
+.packages .box-container .box:nth-child(1),
+.packages .box-container .box:nth-child(2),
+.packages .box-container .box:nth-child(3),
+.packages .box-container .box:nth-child(4),
+.packages .box-container .box:nth-child(5),
+.packages .box-container .box:nth-child(6) {
+   display: inline-block;
+}
+
+.packages .box-container .box:hover .image img {
+   transform: scale(1.1);
+}
+
+.packages .box-container .box .image {
+   height: 25rem;
+   overflow: hidden;
+}
+
+.packages .box-container .box .image img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   transition: .2s linear;
+}
+
+.packages .box-container .box .content {
+   padding: 2rem;
+   text-align: center;
+}
+
+.packages .box-container .box .content h3 {
+   font-size: 2.5rem;
+   color: var(--black);
+}
+
+.packages .box-container .box .content p {
+   font-size: 1.5rem;
+   color: var(--light-black);
+   line-height: 2;
+   padding: 1rem 0;
+}
+
+.packages .load-more {
+   text-align: center;
+   margin-top: 2rem;
+}
+
+/* Package "Book Now" Buttons - Inherits Global Gaming UI Style */
+
+.booking .book-form {
+   padding: 2rem;
+   background: var(--light-bg);
+}
+
+.booking .book-form .flex {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+}
+
+.booking .book-form .flex .inputBox {
+   flex: 1 1 41rem;
+}
+
+.booking .book-form .flex .inputBox input {
+   width: 100%;
+   padding: 1.2rem 1.4rem;
+   font-size: 1.6rem;
+   color: var(--main-color);
+   /* Deep Navy text for visibility */
+   font-weight: bold;
+   text-transform: none;
+   margin-top: 1.5rem;
+   border: var(--border);
+}
+
+.booking .book-form .flex .inputBox input:focus {
+   background: var(--black);
+   color: var(--white);
+}
+
+.booking .book-form .flex .inputBox input:focus::placeholder {
+   color: var(--light-white);
+}
+
+.booking .book-form .flex .inputBox span {
+   font-size: 1.5rem;
+   color: var(--light-black);
+}
+
+.booking .book-form .btn {
+   margin-top: 2rem;
+}
+
+/* FAQ Section */
+.faq .accordion-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+.faq .accordion {
+   background: var(--white);
+   border: var(--border);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+   overflow: hidden;
+}
+
+.faq .accordion .accordion-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2.5rem;
+   cursor: pointer;
+   background: var(--white);
+   transition: background 0.2s;
+}
+
+.faq .accordion .accordion-header:hover {
+   background: var(--light-bg);
+}
+
+.faq .accordion .accordion-header h3 {
+   font-size: 2.5rem;
+   color: var(--black);
+   font-weight: 600;
+}
+
+.faq .accordion .accordion-header .fas {
+   font-size: 2rem;
+   color: var(--black);
+   transition: transform 0.2s;
+}
+
+.faq .accordion.active .accordion-header .fas {
+   transform: rotate(180deg);
+   color: var(--tomato);
+}
+
+.faq .accordion .accordion-body {
+   padding: 0 2.5rem;
+   height: 0;
+   overflow: hidden;
+   background: var(--light-bg);
+   transition: all 0.2s linear;
+}
+
+.faq .accordion.active .accordion-body {
+   padding: 2.5rem;
+   padding-top: 0;
+}
+
+.faq .accordion .accordion-body p {
+   font-size: 1.8rem;
+   color: var(--light-black);
+   line-height: 2;
+}
+
+.content h2 {
+   font-size: 25px;
+   font-weight: normal;
+   color: #247ba0;
+}
+
+.partner {
+   text-align: center;
+   cursor: pointer;
+   padding: 10px 30px;
+}
+
+[data-theme="dark"] .reviews .slide p {
+   color: #E0E0E0;
+}
+
+[data-theme="dark"] .reviews .slide h3 {
+   color: #FFFFFF;
+}
+
+.scroll-top {
+   position: fixed;
+   bottom: 10px;
+   right: 10px;
+   z-index: 99;
+   background: var(--tomato);
+   color: #fff;
+   border-radius: 50px;
+   padding: 15px;
+   font-weight: bold;
+   line-height: normal;
+   border: none;
+   width: 50px;
+   height: 50px;
+   cursor: pointer;
+}
+
+.footer {
+   background: var(--indigo);
+   background-size: cover;
+   background-position: center;
+}
+
+.footer .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   gap: 3rem;
+}
+
+.footer .box-container .box h3 {
+   color: var(--white);
+   font-size: 2.5rem;
+   padding-bottom: 2rem;
+}
+
+.footer .box-container .box a {
+   color: var(--text-light);
+   font-size: 1.5rem;
+   padding-bottom: 1.5rem;
+   display: block;
+}
+
+.footer .box-container .box a i {
+   color: var(--amber);
+   /* Icons also amber by default or on hover? Request said hover turns amber. Let's make icons amber by default for contrast or white? User said "Hover effect (orange) is not working everywhere". */
+   padding-right: .5rem;
+   transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i {
+   padding-right: 2rem;
+   color: var(--amber);
+}
+
+.footer .box-container .box a:hover {
+   color: var(--amber) !important;
+   padding-left: 2rem;
+   /* Add slide effect */
+}
+
+.footer .credit {
+   text-align: center;
+   padding-top: 3rem;
+   margin-top: 3rem;
+   border-top: .1rem solid var(--light-white);
+   font-size: 2rem;
+   color: var(--white);
+}
+
+.footer .credit span {
+   color: var(--tomato);
+}
+
+/* Dark Mode Footer Adjustments - Keeping the Deep Indigo theme consistent */
+[data-theme="dark"] .footer {
+   background: var(--indigo);
+}
+
+[data-theme="dark"] .footer .box-container .box h3 {
+   color: var(--white);
+}
+
+[data-theme="dark"] .footer .box-container .box a {
+   color: var(--text-light);
+}
+
+[data-theme="dark"] .footer .box-container .box a:hover {
+   color: var(--amber) !important;
+}
+
+[data-theme="dark"] .footer .credit {
+   color: var(--black);
+   border-top: .1rem solid var(--light-black);
+}
+
+.active {
+   color: var(--tomato) !important;
+}
+
+
+
+
+
+
+
+
+
+/* stats section styles */
+
+.stats .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+   gap: 2rem;
+}
+
+.stats .box-container .box {
+   background: var(--light-bg);
+   padding: 3rem 2rem;
+   text-align: center;
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+}
+
+.stats .box-container .box:hover {
+   background: var(--amber);
+   /* Amber background on hover */
+}
+
+.stats .box-container .box img {
+   height: 7rem;
+   margin-bottom: 1rem;
+   transition: .2s linear;
+}
+
+.stats .box-container .box:hover img {
+   filter: brightness(0) invert(1);
+   /* Make icons white on hover */
+}
+
+.stats .box-container .box h3 {
+   font-size: 4.5rem;
+   color: var(--black);
+   transition: .2s linear;
+}
+
+.stats .box-container .box:hover h3 {
+   color: #fff;
+   /* Pure White text on hover (works in both dark/light) */
+}
+
+.stats .box-container .box p {
+   font-size: 2rem;
+   color: var(--main-color);
+   transition: .2s linear;
+}
+
+.stats .box-container .box:hover p {
+   color: #fff;
+}
+
+/* media queries  */
+
+@media (max-width:1200px) {
+
+   section {
+      padding: 3rem 5%;
+   }
+
+}
+
+@media (max-width:991px) {
+
+   html {
+      font-size: 55%;
+   }
+
+   section {
+      padding: 3rem 2rem;
+   }
+
+   .home .slide .content h3 {
+      font-size: 10vw;
+   }
+
+}
+
+@media (max-width:768px) {
+
+   .heading h1 {
+      font-size: 4rem;
+   }
+
+   #menu-btn {
+      display: inline-block;
+      transition: .2s linear;
+   }
+
+   #menu-btn.fa-times {
+      transform: rotate(180deg);
+   }
+
+   .header .navbar {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background-color: var(--white);
+      border-top: var(--border);
+      padding: 2rem;
+      transition: .2s linear;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .navbar a {
+      display: block;
+      margin: 2rem;
+      text-align: center;
+   }
+
+}
+
+@media (max-width:450px) {
+
+   html {
+      font-size: 50%;
+   }
+
+   .heading-title {
+      font-size: 3.5rem;
+   }
+
+   .logo img {
+      width: 70%;
+   }
+
+}
+
+/* --- Comprehensive Dark Mode Fixes --- */
+
+[data-theme="dark"] {
+   background-color: #020617 !important;
+   /* Darkest Navy for a pro look */
+   color: #F8FAFC !important;
+}
+
+/* Fix 1: Make all headers and text pure white */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] p,
+[data-theme="dark"] a,
+[data-theme="dark"] .section-title {
+   color: #FFFFFF !important;
+}
+
+/* Fix 2: Icon & Logo Visibility */
+[data-theme="dark"] .logo img,
+[data-theme="dark"] .footer-logo img,
+[data-theme="dark"] .service-icon i,
+[data-theme="dark"] .social-icon {
+   filter: brightness(0) invert(1);
+   /* Turns dark icons into white */
+}
+
+/* Fix 3: Footer Layout Rescue */
+[data-theme="dark"] .footer {
+   background-color: #0F172A;
+   /* Deep Navy */
+   width: 100% !important;
+   /* Forces Footer to span full width */
+   display: block !important;
+   clear: both;
+}
+
+/* Fix 4: Review Cards Contrast */
+[data-theme="dark"] .review-card {
+   background-color: #1E293B;
+   /* Slightly lighter navy for cards */
+   border: 1px solid #334155;
+}
+
+[data-theme="dark"] .header .navbar a.active {
+   color: var(--amber) !important;
+}
+
+/* RTL Specific Overrides */
+html[dir="rtl"] .reviews .slide p {
+   text-align: right;
+}
+
+/* Fix 6: Booking Form Dark Mode */
+[data-theme="dark"] .booking .book-form .inputBox span {
+   color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .booking .book-form .inputBox input {
+   background-color: #1E293B;
+   /* Lighter Navy */
+   color: #FFFFFF !important;
+   border: 1px solid #334155;
+}
+
+[data-theme="dark"] .booking .book-form .inputBox input:focus {
+   background-color: #0F172A;
+   /* Darker on focs */
+   border-color: var(--amber);
+}
+
+/* Fix 7: Reviews Text in Dark Mode */
+[data-theme="dark"] .reviews .slide p {
+   color: #E0E0E0 !important;
+}
+
+[data-theme="dark"] .reviews .slide h3 {
+   color: #FFFFFF !important;
+}
+
+/* Fix 8: Submit Button White Hover */
+.booking .book-form .btn:hover {
+   background: #FFFFFF;
+   color: var(--main-color);
+}
+
+/* Fix 9: intl-tel-input Dark Mode & Layout */
+.iti {
+   width: 100%;
+   display: block;
+}
+
+.iti input {
+   padding-left: 80px !important;
+   /* Adjusted to 80px */
+   color: #0F172A !important;
+   /* Deep Navy for Light Mode */
+   font-weight: bold;
+}
+
+/* Dark Mode Override for Input Text */
+[data-theme="dark"] .iti input {
+   color: #FFFFFF !important;
+}
+
+/* RTL Support for intl-tel-input */
+html[dir="rtl"] .iti input {
+   padding-left: 1.4rem !important;
+   padding-right: 80px !important;
+}
+
+.iti__country-list {
+   background-color: #1E293B !important;
+   color: #FFFFFF !important;
+   border: 1px solid #334155;
+   max-width: 300px;
+   white-space: normal;
+}
+
+.iti__country:hover {
+   background-color: #F59E0B !important;
+   color: #0F172A !important;
+}
+
+.iti input::placeholder {
+   color: #94A3B8 !important;
+   opacity: 0.6;
+}
+
+[data-theme="dark"] .iti__country.iti__highlight {
+   background-color: #F59E0B !important;
+   color: #0F172A !important;
+}
+
+[data-theme="dark"] .iti__divider {
+   border-bottom: 1px solid #334155;
+}
+
+/* Fix 10: Autofill Background & Selection */
+/* Fix 10: Global Input Consistency & Autofill */
+
+/* 1. Standardizing all input fields to White in Light Mode */
+.booking .book-form .flex .inputBox input {
+   background-color: #FFFFFF !important;
+   /* Force white background */
+   color: #0F172A !important;
+   /* Deep Navy text for readability */
+   border: 1px solid #D1D5DB;
+   padding: 12px;
+   /* Standardized padding */
+   border-radius: 5px;
+   -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset !important;
+   /* Fixes the black autofill issue */
+}
+
+/* 2. Maintaining Dark Mode Integrity */
+[data-theme="dark"] .booking .book-form .flex .inputBox input {
+   background-color: #1E293B !important;
+   /* Dark Navy for Dark Mode */
+   color: #FFFFFF !important;
+   -webkit-box-shadow: 0 0 0px 1000px #1E293B inset !important;
+   /* Fixes autofill for Dark Mode */
+   border: 1px solid #334155;
+}
+
+/* 3. Highlighting the Active Input Box */
+.booking .book-form .flex .inputBox input:focus {
+   border: 2px solid #F59E0B;
+   /* Amber Orange border on click */
+   outline: none;
+}
+
+/* Selection Color (Amber & White) */
+input::selection {
+   background: #F59E0B;
+   color: #FFFFFF;
+}
+
+/* Fix 11: Final Dark Mode Polishing for Booking Form */
+
+[data-theme="dark"] .booking .book-form {
+   background-color: #0F172A !important;
+   /* Deep Navy background for the form container */
+   padding: 30px;
+   border-radius: 10px;
+}
+
+/* 1. Labels Visibility */
+[data-theme="dark"] .inputBox span {
+   color: #F59E0B !important;
+   /* Amber Orange for labels to make them pop */
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 14px;
+}
+
+/* 2. Input Fields Styling */
+[data-theme="dark"] .inputBox input,
+[data-theme="dark"] .iti__country-list {
+   background-color: #1E293B !important;
+   /* Slightly lighter navy for inputs */
+   color: #FFFFFF !important;
+   border: 1px solid #334155 !important;
+   border-radius: 5px;
+}
+
+/* 3. Placeholder Color */
+[data-theme="dark"] input::placeholder {
+   color: #94A3B8 !important;
+   /* Soft gray-blue for hints */
+   opacity: 0.7;
+}
+
+/* 4. Focus State */
+/* Fix 12: Booking Form Alignment & Height */
+.booking .book-form .flex {
+   align-items: flex-end !important;
+   /* Forces all input boxes to align at the bottom */
+}
+
+/* Fixed Height for ALL Inputs */
+.booking .book-form .flex .inputBox input,
+.iti__country-list {
+   height: 50px !important;
+   /* Fixed height for consistency */
+}
+
+/* Ensure labels take full width and align top */
+.booking .book-form .flex .inputBox span {
+   width: 100%;
+   display: block;
+   margin-bottom: 5px;
+   /* Spacing between label and input */
+}
+
+/* Fix 13: Persistent Autofill Issues (Force Colors) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+   -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+   -webkit-text-fill-color: #0F172A !important;
+   background-color: #FFFFFF !important;
+   color: #0F172A !important;
+   transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Dark Mode Autofill Override */
+[data-theme="dark"] input:-webkit-autofill,
+[data-theme="dark"] input:-webkit-autofill:hover,
+[data-theme="dark"] input:-webkit-autofill:focus,
+[data-theme="dark"] input:-webkit-autofill:active {
+   -webkit-box-shadow: 0 0 0 1000px #1E293B inset !important;
+   -webkit-text-fill-color: #FFFFFF !important;
+   background-color: #1E293B !important;
+   color: #FFFFFF !important;
+}
+
+/* intl-tel-input Container Fix (Restored) */
+.iti {
+   height: 50px !important;
+   display: block;
+}
+
+/* Fix 14: Gallery Hover Effects (Updated) */
+.gallary .box .content {
+   background: rgba(0, 0, 0, 0.7);
+   /* Dark semi-transparent overlay */
+}
+
+.gallary .box .content h3 {
+   color: #F59E0B !important;
+   /* Bold Title Orange */
+   font-size: 2.2rem;
+   margin-bottom: 1rem;
+   text-transform: uppercase;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   /* Kept shadow for readability */
+}
+
+.gallary .box .content p {
+   color: #FFFFFF !important;
+   /* Description White */
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Fix 16: Navbar Logo Styling */
+.navbar .logo i {
+   color: #F59E0B;
+   margin-right: 10px;
+   font-size: 2.5rem;
+}
+
+/* Fix 15: Syncing Stats Cards with Services Style */
+.stats .box-container .box {
+   background: #0F172A !important;
+   /* Match Services Background */
+   border-radius: 0.5rem;
+   padding: 2rem;
+   text-align: center;
+   transition: all 0.3s ease;
+   box-shadow: var(--box-shadow);
+}
+
+.stats .box-container .box:hover {
+   background: #F59E0B !important;
+   /* Match Services Hover */
+   transform: translateY(-5px);
+}
+
+.stats .box-container .box h3,
+.stats .box-container .box p,
+.stats .box-container .box i {
+   color: #FFFFFF !important;
+   /* Keep everything visible */
+}
