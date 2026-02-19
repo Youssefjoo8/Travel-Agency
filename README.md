@@ -1,4 +1,4 @@
-# 🌍 Travel Agency | Team 21
+# 🌍 Travel Agency
 
 A modern, responsive travel agency website featuring a dynamic booking system, dark mode, and multi-language support (English & Arabic).
 
@@ -58,5 +58,4 @@ http://localhost/new_one_travel2/pages/en/home.php
 -   `images/` - Project assets.
 -   `database.sql` - Database import file.
 
-## 👨‍💻 Team 21
-Developed by Team 21.
+## 🙌
