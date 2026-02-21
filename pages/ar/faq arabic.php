@@ -20,19 +20,23 @@
 <body>
 
 <!-- header section starts  -->
+<!-- header section starts  -->
 <section class="header">
-   <a href="home arabic.php" class="logo">منصة وكاله سياحيه | مجموعه 21</a>
+   <a href="home arabic.php" class="logo"> <i class="fas fa-globe-americas"></i> TRAVEL AGENCY </a>
    <nav class="navbar">
-      <a href="../en/home.php" style="text-decoration: underline;">الانجليزية</a>
-      <a href="gallery arabic.php" class="<?php echo($page == 'gallery arabic.php') ? 'active' : ''; ?>">معرض الصور </a>
-      <a href="book arabic.php" class="<?php echo($page == 'book arabic.php') ? 'active' : ''; ?>">حجز رحلة</a>
-      <a href="package arabic.php" class="<?php echo($page == 'package arabic.php') ? 'active' : ''; ?>">الرحلات</a>
-      <a href="about arabic.php" class="<?php echo($page == 'about arabic.php') ? 'active' : ''; ?>">عن الموقع</a>
       <a href="home arabic.php" class="<?php echo($page == 'home arabic.php') ? 'active' : ''; ?>">الرئيسية</a>
+      <a href="about arabic.php" class="<?php echo($page == 'about arabic.php') ? 'active' : ''; ?>">عن الموقع</a>
+      <a href="package arabic.php" class="<?php echo($page == 'package arabic.php') ? 'active' : ''; ?>">الرحلات</a>
+      <a href="book arabic.php" class="<?php echo($page == 'book arabic.php') ? 'active' : ''; ?>">حجز رحلة</a>
+      <a href="gallery arabic.php" class="<?php echo($page == 'gallery arabic.php') ? 'active' : ''; ?>">معرض الصور</a>
    </nav>
-   <div id="menu-btn" class="fas fa-bars"></div>
-   <div id="theme-btn" class="fas fa-moon"></div>
+   <div class="icons">
+      <a href="../en/home.php" class="fas fa-globe"></a>
+      <div id="theme-btn" class="fas fa-moon"></div>
+      <div id="menu-btn" class="fas fa-bars"></div>
+   </div>
 </section>
+<!-- header section ends -->
 <!-- header section ends -->
 
 <div class="heading" style="background:url(../../images/header-bg-1.png) no-repeat">

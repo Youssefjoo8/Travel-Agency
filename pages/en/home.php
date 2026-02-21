@@ -20,19 +20,19 @@
 <body>
 <!-- header section starts  -->
 <section class="header">
-   <a  href="home.php" class="logo"> <i class="fas fa-globe-americas"></i> Travel agency | TEAM 21</a>
+   <a href="home.php" class="logo"> <i class="fas fa-globe-americas"></i> TRAVEL AGENCY </a>
    <nav class="navbar">
-      <a href="home.php" class="<?php echo($page == 'home.php') ? 'active' : ''; ?>">Home</a>
+      <a href="home.php" class="<?php echo($page == 'home.php') ? 'active' : ''; ?>">home</a>
       <a href="about.php" class="<?php echo($page == 'about.php') ? 'active' : ''; ?>">about</a>
       <a href="package.php" class="<?php echo($page == 'package.php') ? 'active' : ''; ?>">package</a>
       <a href="book.php" class="<?php echo($page == 'book.php') ? 'active' : ''; ?>">book</a>
       <a href="gallery.php" class="<?php echo($page == 'gallery.php') ? 'active' : ''; ?>">gallery</a>
-      <a href="../ar/home arabic.php" style="text-decoration: underline;">ARABIC </a>
    </nav>
-   <div id="menu-btn" class="fas fa-bars"></div>
-   <div id="theme-btn" class="fas fa-moon"></div>
-
-
+   <div class="icons">
+      <a href="../ar/home arabic.php" class="fas fa-globe"></a>
+      <div id="theme-btn" class="fas fa-moon"></div>
+      <div id="menu-btn" class="fas fa-bars"></div>
+   </div>
 </section>
 <!-- header section ends -->
 <!-- home section starts  -->
