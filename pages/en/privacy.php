@@ -123,7 +123,7 @@
          <a href="https://www.linkedin.com"> <i class="fab fa-linkedin"></i> linkedin </a>
       </div>
    </div>
-   <div class="credit"> designed by <span>Team 21</span> </div>
+   <div class="credit"> designed by <span>Team 21</span> | all rights reserved! </div>
 </section>
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

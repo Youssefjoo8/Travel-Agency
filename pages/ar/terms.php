@@ -122,7 +122,7 @@
          <a href="https://www.linkedin.com"> <i class="fab fa-linkedin"></i> linkedin </a>
       </div>
    </div>
-   <div class="credit"> تم التصميم بواسطة <span>فريق 21</span> </div>
+   <div class="credit"> <span>فريق 21</span> | جميع الحقوق محفوظة! </div>
 </section>
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

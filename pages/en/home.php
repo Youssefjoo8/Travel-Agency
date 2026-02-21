@@ -307,7 +307,7 @@
          <a href="https://www.linkedin.com"> <i class="fab fa-linkedin"></i> linkedin </a>
       </div>
    </div>
-   <div class="credit"> designed by <span>Team 21</span>  </div>
+   <div class="credit"> designed by <span>Team 21</span> | all rights reserved! </div>
 </section>
 <!-- footer section ends -->
 <!-- swiper js link  -->
