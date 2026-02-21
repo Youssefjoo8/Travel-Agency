@@ -14,9 +14,9 @@ if (isset($_POST['send'])) {
 
    $request = " insert into book_form(name, email, phone, address, location, guests, arrivals, leaving) values('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving') ";
    mysqli_query($connection, $request);
+   $booking_id = mysqli_insert_id($connection);
    session_start();
-   $_SESSION['success_message'] = "room booked successfully.";
-   header('location:book.php');
+   header("location:payment.php?booking_id=$booking_id");
 
 }
 else {

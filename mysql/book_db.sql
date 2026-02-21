@@ -31,12 +31,14 @@ CREATE TABLE `book_form` (
   `id` int(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `phone` varchar(11) NOT NULL,
+  `phone` varchar(20) NOT NULL,
   `address` varchar(255) NOT NULL,
   `location` varchar(255) NOT NULL,
   `guests` int(255) NOT NULL,
   `arrivals` date NOT NULL,
-  `leaving` date NOT NULL
+  `leaving` date NOT NULL,
+  `status` enum('New','Contacted','Paid','Cancelled') DEFAULT 'New',
+  `assigned_employee` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

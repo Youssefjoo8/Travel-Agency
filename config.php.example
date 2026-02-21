@@ -1,0 +1,18 @@
+<?php
+
+// Database connection details
+// DO NOT commit your real password to GitHub!
+// Copy this file to config.php and fill in your details.
+
+$host = 'localhost';
+$user = 'root';
+$pass = ''; // Your DB password
+$db   = 'book_db';
+
+$connection = mysqli_connect($host, $user, $pass, $db);
+
+if (!$connection) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+?>
