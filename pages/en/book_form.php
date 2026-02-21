@@ -16,8 +16,9 @@ if (isset($_POST['send'])) {
    mysqli_query($connection, $request);
    $booking_id = mysqli_insert_id($connection);
    session_start();
-   header("location:payment.php?booking_id=$booking_id");
-
+   $_SESSION['booking_id'] = $booking_id;
+   header("location:book.php?show_payment=1");
+   exit();
 }
 else {
    echo 'something went wrong please try again!';

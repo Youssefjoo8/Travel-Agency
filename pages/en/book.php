@@ -21,6 +21,116 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.1/build/css/intlTelInput.css">
    <style>
       .iti { width: 100%; }
+      
+      /* Modal Styles */
+      .payment-modal {
+         display: none;
+         position: fixed;
+         z-index: 1000;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0,0,0,0.8);
+         backdrop-filter: blur(5px);
+         justify-content: center;
+         align-items: center;
+      }
+
+      .payment-modal.active {
+         display: flex;
+      }
+
+      .payment-card {
+         background: #1e1e1e;
+         width: 100%;
+         max-width: 450px;
+         padding: 2.5rem;
+         border-radius: 4px;
+         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+         color: #fff;
+         position: relative;
+      }
+
+      .payment-card .logo {
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 1.5rem;
+         font-weight: bold;
+         letter-spacing: 1px;
+         color: #fff;
+      }
+
+      .payment-card h2 {
+         font-size: 1.2rem;
+         margin-bottom: 1.5rem;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         text-align: center;
+      }
+
+      .input-group {
+         margin-bottom: 1.2rem;
+         text-align: left;
+      }
+
+      .input-group label {
+         display: block;
+         font-size: 0.8rem;
+         color: #b5b5b5;
+         margin-bottom: 0.5rem;
+         text-transform: uppercase;
+      }
+
+      .input-group input {
+         width: 100%;
+         background: #2a2a2a;
+         border: 1px solid #333;
+         padding: 0.8rem;
+         color: #fff;
+         border-radius: 4px;
+         box-sizing: border-box;
+         font-size: 1rem;
+         transition: border-color 0.3s;
+      }
+
+      .input-group input:focus {
+         outline: none;
+         border-color: #0078f2;
+      }
+
+      .flex-row {
+         display: flex;
+         gap: 1rem;
+      }
+
+      .btn-pay {
+         width: 100%;
+         background: #0078f2;
+         color: #fff;
+         border: none;
+         padding: 1rem;
+         font-size: 1rem;
+         font-weight: bold;
+         text-transform: uppercase;
+         margin-top: 1.5rem;
+         cursor: pointer;
+         border-radius: 4px;
+         transition: filter 0.3s;
+      }
+
+      .btn-pay:hover {
+         filter: brightness(1.1);
+      }
+
+      .close-modal {
+         position: absolute;
+         top: 10px;
+         right: 15px;
+         font-size: 2rem;
+         color: #b5b5b5;
+         cursor: pointer;
+      }
    </style>
 
 
@@ -108,6 +218,42 @@
 
    </form>
 </section>
+
+<!-- Payment Modal -->
+<div class="payment-modal <?php if (isset($_GET['show_payment']))
+   echo 'active'; ?>" id="paymentModal">
+   <div class="payment-card">
+      <span class="close-modal" onclick="document.getElementById('paymentModal').classList.remove('active')">&times;</span>
+      <div class="logo">TRAVEL AGENCY</div>
+      <h2>Secure Checkout</h2>
+      
+      <form action="process_payment.php" method="post">
+         <div class="input-group">
+            <label>Cardholder Name</label>
+            <input type="text" placeholder="John Doe" required>
+         </div>
+         
+         <div class="input-group">
+            <label>Card Number</label>
+            <input type="text" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
+         </div>
+         
+         <div class="flex-row">
+            <div class="input-group" style="flex: 2;">
+               <label>Expiration Date</label>
+               <input type="text" placeholder="MM/YY" maxlength="5" required>
+            </div>
+            <div class="input-group" style="flex: 1;">
+               <label>CVV</label>
+               <input type="password" placeholder="***" maxlength="3" required>
+            </div>
+         </div>
+         
+         <button type="submit" name="pay" class="btn-pay">Confirm & Pay</button>
+      </form>
+   </div>
+</div>
+
 <button type="button" class="scroll-top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
 <!-- booking section ends -->
 <!-- footer section starts  -->
