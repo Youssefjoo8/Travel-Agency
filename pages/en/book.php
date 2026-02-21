@@ -230,7 +230,7 @@
       <form action="process_payment.php" method="post">
          <div class="input-group">
             <label>Cardholder Name</label>
-            <input type="text" placeholder="John Doe" required>
+            <input type="text" placeholder="Your Name" required>
          </div>
          
          <div class="input-group">
