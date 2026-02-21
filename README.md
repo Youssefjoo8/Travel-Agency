@@ -58,4 +58,6 @@ http://localhost/new_one_travel2/pages/en/home.php
 -   `images/` - Project assets.
 -   `database.sql` - Database import file.
 
-## 🙌
+## 🔗 Live Demo
+You can visit the live website here:
+👉 http://team21-travel.rf.gd
