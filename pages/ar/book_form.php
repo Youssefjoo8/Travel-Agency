@@ -1,6 +1,6 @@
 <?php
 
-$connection = mysqli_connect('localhost', 'root', '', 'book_db');
+include '../../config.php';
 
 if (isset($_POST['send'])) {
     $name = $_POST['name'];
