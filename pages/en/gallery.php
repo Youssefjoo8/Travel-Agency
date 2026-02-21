@@ -13,16 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-       $(document).ready(function(){
-           $(".scroll-top").click(function() {
-               $("html, body").animate({ 
-                   scrollTop: 0 
-               }, "slow");
-               return false;
-           });
-       });
-    </script>
+
 </head>
 <body>
     

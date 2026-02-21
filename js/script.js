@@ -26,10 +26,7 @@ navLinks.forEach(link => {
    }
 });
 
-window.onscroll = () => {
-   menu.classList.remove('fa-times');
-   navbar.classList.remove('active');
-};
+// Menu handler will be merged into window.onscroll at the bottom
 
 // Theme Management
 const themeToggleBtn = document.querySelector('#theme-btn');
@@ -151,3 +148,29 @@ accordions.forEach(accordion => {
       }
    }
 });
+
+// Scroll to Top
+let scrollTopBtn = document.querySelector('.scroll-top');
+
+if (scrollTopBtn) {
+   scrollTopBtn.onclick = () => {
+      window.scrollTo({
+         top: 0,
+         behavior: 'smooth'
+      });
+   };
+
+   window.addEventListener('scroll', () => {
+      // Also close menu on scroll as before
+      if (menu && navbar) {
+         menu.classList.remove('fa-times');
+         navbar.classList.remove('active');
+      }
+
+      if (window.scrollY > 200) {
+         scrollTopBtn.style.display = 'block';
+      } else {
+         scrollTopBtn.style.display = 'none';
+      }
+   });
+}

@@ -18,16 +18,8 @@
    <link rel="stylesheet" href="../../css/style.css?v=<?php echo time(); ?>">
 
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-   <script>
-      $(document).ready(function(){
-          $(".scroll-top").click(function() {
-              $("html, body").animate({ 
-                  scrollTop: 0 
-              }, "slow");
-              return false;
-          });
-      });
-   </script>
+
+
 
 </head>
 <body>

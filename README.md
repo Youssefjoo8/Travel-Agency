@@ -46,7 +46,7 @@ git clone https://github.com/Start-Tech-Academy/travel-agency-team21.git
 ### 4. Run the Website
 Open your browser and navigate to:
 ```
-http://localhost/new_one_travel2/pages/en/home.php
+http://localhost/Travel-Agency/pages/en/home.php
 ```
 
 ## 📂 Project Structure
