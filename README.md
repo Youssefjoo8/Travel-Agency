@@ -32,7 +32,7 @@ Download and install [XAMPP](https://www.apachefriends.org/index.html).
 Clone this repo to your `htdocs` folder.
 ```bash
 cd c:\xampp\htdocs
-git clone https://github.com/Start-Tech-Academy/travel-agency-team21.git
+git clone https://github.com/Start-Tech-Academy/travel-agency-mine.git
 ```
 
 ### 3. Import the Database
@@ -46,7 +46,7 @@ git clone https://github.com/Start-Tech-Academy/travel-agency-team21.git
 ### 4. Run the Website
 Open your browser and navigate to:
 ```
-http://localhost/new_one_travel2/pages/en/home.php
+http://localhost/Travel-Agency/pages/en/home.php
 ```
 
 ## 📂 Project Structure
