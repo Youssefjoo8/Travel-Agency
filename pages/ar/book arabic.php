@@ -1,4 +1,4 @@
-๏ปฟ<?php
+<?php
 
 session_start();
 
@@ -17,7 +17,7 @@ if (!isset($_SESSION['user_id'])) {
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>ููุงูุฉ ุณูุฑ :: ุฃูุถู ููุงูุฉ</title>
+   <title>ๆ฿วแษ ำÝั :: รÝึแ ๆ฿วแษ</title>
 
    <!-- swiper css link  -->
    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -101,7 +101,7 @@ if (!isset($_SESSION['user_id'])) {
          color: #fff;
          border-radius: 4px;
          box-sizing: border-box;
-         font-size: 1rem;
+         font-size: 1.1rem;
          transition: border-color 0.3s;
          text-align: left;
       }
@@ -122,7 +122,7 @@ if (!isset($_SESSION['user_id'])) {
          color: #fff;
          border: none;
          padding: 1rem;
-         font-size: 1rem;
+         font-size: 1.1rem;
          font-weight: bold;
          text-transform: uppercase;
          margin-top: 1.5rem;
@@ -160,13 +160,13 @@ if (!isset($_SESSION['user_id'])) {
    
 <!-- header section starts  -->
 <section class="header">
-   <a href="home arabic.php" class="logo"> <i class="fas fa-globe-americas"></i> ููุงูุฉ ุณูุฑ </a>
+   <a href="home arabic.php" class="logo"> <i class="fas fa-globe-americas"></i> ๆ฿วแษ ำÝั </a>
    <nav class="navbar">
-      <a href="home arabic.php" class="<?php echo($page == 'home arabic.php') ? 'active' : ''; ?>">ุงูุฑุฆูุณูุฉ</a>
-      <a href="about arabic.php" class="<?php echo($page == 'about arabic.php') ? 'active' : ''; ?>">ุนูู‘ุง</a>
-      <a href="package arabic.php" class="<?php echo($page == 'package arabic.php') ? 'active' : ''; ?>">ุงูุนุฑูุถ</a>
-      <a href="book arabic.php" class="<?php echo($page == 'book arabic.php') ? 'active' : ''; ?>">ุงุญุฌุฒ</a>
-      <a href="gallery arabic.php" class="<?php echo($page == 'gallery arabic.php') ? 'active' : ''; ?>">ุงูู…ุนุฑุถ</a>
+      <a href="home arabic.php" class="<?php echo($page == 'home arabic.php') ? 'active' : ''; ?>">วแัฦํำํษ</a>
+      <a href="about arabic.php" class="<?php echo($page == 'about arabic.php') ? 'active' : ''; ?>">ฺไ๘ว</a>
+      <a href="package arabic.php" class="<?php echo($page == 'package arabic.php') ? 'active' : ''; ?>">วแฺัๆึ</a>
+      <a href="book arabic.php" class="<?php echo($page == 'book arabic.php') ? 'active' : ''; ?>">วอฬา</a>
+      <a href="gallery arabic.php" class="<?php echo($page == 'gallery arabic.php') ? 'active' : ''; ?>">วแใฺัึ</a>
    </nav>
    <div class="icons">
        <?php
@@ -200,66 +200,66 @@ endif; ?>
 <!-- header section ends -->
 
 <div class="heading" style="background:url(../../images/header-bg-3.png) no-repeat">
-   <h1>ุงุญุฌุฒ ุงูุขู</h1>
+   <h1>วอฬา วแยไ</h1>
 </div>
 
 <!-- booking section starts  -->
 
 <section class="booking">
 
-   <h1 class="heading-title">ุงุญุฌุฒ ุฑุญูุชู!</h1>
+   <h1 class="heading-title">วอฬา ัอแส฿!</h1>
 
    <form action="book_form.php" method="post" class="book-form" id="bookingForm">
 
       <div class="flex">
          <div class="inputBox">
-            <span>ุงูุงุณู… :</span>
-            <input type="text" placeholder="ุฃุฏุฎู ุงุณู…ู" name="name" id="name" value="<?php echo isset($_SESSION['user_name']) ? $_SESSION['user_name'] : ''; ?>">
-            <span class="error-message" id="nameError">ูุฐุง ุงูุญูู ู…ุทููุจ</span>
+            <span>วแวำใ :</span>
+            <input type="text" placeholder="รฯฮแ วำใ฿" name="name" id="name" value="<?php echo isset($_SESSION['user_name']) ? $_SESSION['user_name'] : ''; ?>">
+            <span class="error-message" id="nameError">ๅะว วแอÞแ ใุแๆศ</span>
          </div>
          <div class="inputBox">
-            <span>ุงูุจุฑูุฏ ุงูุฅููุชุฑููู :</span>
-            <input type="email" placeholder="ุฃุฏุฎู ุจุฑูุฏู ุงูุฅููุชุฑููู" name="email" id="email" value="<?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?>">
-            <span class="error-message" id="emailError">ูุฑุฌู ุฅุฏุฎุงู ุจุฑูุฏ ุฅููุชุฑููู ุตุงูุญ</span>
+            <span>วแศัํฯ วแลแ฿สัๆไํ :</span>
+            <input type="email" placeholder="รฯฮแ ศัํฯ฿ วแลแ฿สัๆไํ" name="email" id="email" value="<?php echo isset($_SESSION['email']) ? $_SESSION['email'] : ''; ?>">
+            <span class="error-message" id="emailError">ํัฬ์ ลฯฮวแ ศัํฯ ลแ฿สัๆไํ ีวแอ</span>
          </div>
          <div class="inputBox">
-            <span>ุงููุงุชู :</span>
-            <input type="tel" placeholder="ุฃุฏุฎู ุฑูู…ู" name="phone" id="phone">
-            <span class="error-message" id="phoneError">ูุฌุจ ุฃู ูุชููู ุงููุงุชู ู…ู 11 ุฑูู…ุงู ุจุงูุถุจุท</span>
+            <span>วแๅวสÝ :</span>
+            <input type="tel" placeholder="รฯฮแ ัÞใ฿" name="phone" id="phone">
+            <span class="error-message" id="phoneError">ํฬศ รไ ํส฿ๆไ วแๅวสÝ ใไ 11 ัÞใว๐ ศวแึศุ</span>
          </div>
          <div class="inputBox">
-            <span>ุงูุนููุงู :</span>
-            <input type="text" placeholder="ุฃุฏุฎู ุนููุงูู" name="address" id="address">
-            <span class="error-message" id="addressError">ูุฐุง ุงูุญูู ู…ุทููุจ</span>
+            <span>วแฺไๆวไ :</span>
+            <input type="text" placeholder="รฯฮแ ฺไๆวไ฿" name="address" id="address">
+            <span class="error-message" id="addressError">ๅะว วแอÞแ ใุแๆศ</span>
          </div>
          <div class="inputBox">
-            <span>ุฅูู ุฃูู :</span>
-            <input type="text" placeholder="ุงูู…ูุงู ุงูุฐู ุชุฑูุฏ ุฒูุงุฑุชู" name="location" id="location">
-            <span class="error-message" id="locationError">ูุฐุง ุงูุญูู ู…ุทููุจ</span>
+            <span>ลแ์ รํไ :</span>
+            <input type="text" placeholder="วแใ฿วไ วแะํ สัํฯ าํวัสๅ" name="location" id="location">
+            <span class="error-message" id="locationError">ๅะว วแอÞแ ใุแๆศ</span>
          </div>
          <div class="inputBox">
-            <span>ูู… ุงูุนุฏุฏ :</span>
-            <input type="number" placeholder="ุนุฏุฏ ุงูุถููู" name="guests" id="guests" min="1" value="1">
-            <span class="error-message" id="guestsError">ูุฐุง ุงูุญูู ู…ุทููุจ</span>
+            <span>฿ใ วแฺฯฯ :</span>
+            <input type="number" placeholder="ฺฯฯ วแึํๆÝ" name="guests" id="guests" min="1" value="1">
+            <span class="error-message" id="guestsError">ๅะว วแอÞแ ใุแๆศ</span>
          </div>
          <div class="inputBox" id="pricingDisplay" style="display: none;">
-            <span>ุชูุงุตูู ุงูุชุณุนูุฑ :</span>
+            <span>สÝวีํแ วแสำฺํั :</span>
             <div style="background: var(--light-bg); padding: 1rem; border-radius: .5rem; font-size: 1.5rem; color: var(--light-color);">
-                <div>ุณุนุฑ ุงููุฑุฏ: <strong id="liveUnitPrice" style="color: var(--black);">Eg 0</strong></div>
+                <div>ำฺั วแÝัฯ: <strong id="liveUnitPrice" style="color: var(--black);">Eg 0</strong></div>
                 <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1);">
-                    ุงูุณุนุฑ ุงูุฅุฌู…ุงูู: <strong id="liveTotalPrice" style="color: var(--black);">Eg 0</strong>
+                    วแำฺั วแลฬใวแํ: <strong id="liveTotalPrice" style="color: var(--black);">Eg 0</strong>
                 </div>
             </div>
          </div>
          <div class="inputBox">
-            <span>ุชุงุฑูุฎ ุงููุตูู :</span>
+            <span>สวัํฮ วแๆีๆแ :</span>
             <input type="date" name="arrivals" id="arrivals">
-            <span class="error-message" id="arrivalsError">ูุฐุง ุงูุญูู ู…ุทููุจ</span>
+            <span class="error-message" id="arrivalsError">ๅะว วแอÞแ ใุแๆศ</span>
          </div>
          <div class="inputBox">
-            <span>ุชุงุฑูุฎ ุงูู…ุบุงุฏุฑุฉ :</span>
+            <span>สวัํฮ วแใÛวฯัษ :</span>
             <input type="date" name="leaving" id="leaving">
-            <span class="error-message" id="leavingError">ูุฐุง ุงูุญูู ู…ุทููุจ</span>
+            <span class="error-message" id="leavingError">ๅะว วแอÞแ ใุแๆศ</span>
          </div>
       </div>
 
@@ -267,7 +267,7 @@ endif; ?>
       <input type="hidden" name="package_name" id="packageName">
       <input type="hidden" name="total_amount" id="totalAmount">
 
-      <input type="button" value="ุฅุฑุณุงู" class="btn" name="send" id="submitBtn">
+      <input type="button" value="ลัำวแ" class="btn" name="send" id="submitBtn">
 
    </form>
 </section>
@@ -276,32 +276,32 @@ endif; ?>
 <div class="payment-modal" id="paymentModal">
    <div class="payment-card">
       <span class="close-modal" onclick="document.getElementById('paymentModal').classList.remove('active')">&times;</span>
-      <div class="logo">ููุงูุฉ ุณูุฑ</div>
-      <h2>ุงูุฏูุน ุงูุขู…ู</h2>
+      <div class="logo">ๆ฿วแษ ำÝั</div>
+      <h2>วแฯÝฺ วแยใไ</h2>
       
       <form id="paymentForm">
          <div class="input-group">
-            <label>ุงุณู… ุญุงู…ู ุงูุจุทุงูุฉ</label>
-            <input type="text" placeholder="ุงุณู…ู" required>
+            <label>วำใ อวใแ วแศุวÞษ</label>
+            <input type="text" placeholder="วำใ฿" required>
          </div>
          
          <div class="input-group">
-            <label>ุฑูู… ุงูุจุทุงูุฉ</label>
+            <label>ัÞใ วแศุวÞษ</label>
             <input type="text" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
          </div>
          
          <div class="flex-row">
             <div class="input-group" style="flex: 2;">
-               <label>ุชุงุฑูุฎ ุงูุงูุชูุงุก</label>
+               <label>สวัํฮ วแวไสๅวม</label>
                <input type="text" placeholder="MM/YY" maxlength="5" required>
             </div>
             <div class="input-group" style="flex: 1;">
-               <label>ุฑู…ุฒ ุงูุฃู…ุงู (CVV)</label>
+               <label>ัใา วแรใวไ (CVV)</label>
                <input type="password" placeholder="***" maxlength="3" required>
             </div>
          </div>
          
-         <button type="submit" class="btn-pay">ุชุฃููุฏ ูุฏูุน</button>
+         <button type="submit" class="btn-pay">สร฿ํฯ ๆฯÝฺ</button>
       </form>
    </div>
 </div>
@@ -310,34 +310,34 @@ endif; ?>
 <div class="invoice-modal" id="invoiceModal">
    <div class="invoice-card">
       <div class="invoice-header">
-         <h2>ุฑุงุฌุน ุญุฌุฒู</h2>
+         <h2>ัวฬฺ อฬา฿</h2>
       </div>
       <div class="invoice-body">
          <div class="item">
-            <span class="label">ุงูุนุฑุถ:</span>
-            <span id="invoicePackage">ูู… ูุชู… ุงูุงุฎุชูุงุฑ</span>
+            <span class="label">วแฺัึ:</span>
+            <span id="invoicePackage">แใ ํสใ วแวฮสํวั</span>
          </div>
          <div class="item">
-            <span class="label">ุงูุถููู:</span>
+            <span class="label">วแึํๆÝ:</span>
             <span id="invoiceGuests">0</span>
          </div>
          <div class="item">
-            <span class="label">ุณุนุฑ ุงููุฑุฏ:</span>
+            <span class="label">ำฺั วแÝัฯ:</span>
             <span id="invoiceBasePrice">Eg 0</span>
          </div>
          <div class="promo-section">
-            <input type="text" placeholder="ุฃุฏุฎู ุฑู…ุฒ ุงูุนุฑุถ" id="promoCode">
+            <input type="text" placeholder="รฯฮแ ัใา วแฺัึ" id="promoCode">
          </div>
          <div class="total">
-            <span>ุงูุณุนุฑ ุงูุฅุฌู…ุงูู:</span>
+            <span>วแำฺั วแลฬใวแํ:</span>
             <span id="invoiceTotal">Eg 0</span>
          </div>
       </div>
       <div class="invoice-footer">
-         <button class="btn btn-secondary" onclick="document.getElementById('invoiceModal').classList.remove('active')">ุฑุฌูุน</button>
-         <button class="btn btn-outline" id="bookPayLater">ุงุญุฌุฒ ูุงุฏูุน ูุงุญูุงู</button>
-         <button class="btn btn-outline" id="requestBookingBtn" style="display: none;">ุทูุจ ุญุฌุฒ</button>
-         <button class="btn" id="proceedToPay">ุชุฃููุฏ ูุฏูุน</button>
+         <button class="btn btn-secondary" onclick="document.getElementById('invoiceModal').classList.remove('active')">ัฬๆฺ</button>
+         <button class="btn btn-outline" id="bookPayLater">วอฬา ๆวฯÝฺ แวอÞว๐</button>
+         <button class="btn btn-outline" id="requestBookingBtn" style="display: none;">ุแศ อฬา</button>
+         <button class="btn" id="proceedToPay">สร฿ํฯ ๆฯÝฺ</button>
       </div>
    </div>
 </div>
@@ -351,9 +351,9 @@ endif; ?>
             <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
          </svg>
       </div>
-      <h2>ุชู… ุงูุญุฌุฒ ุจูุฌุงุญ!</h2>
-      <p>ุชู… ุญุฌุฒ ุฑุญูุชู ุจูุฌุงุญ! ุณูุชู… ุฅุฑุณุงู ุชูุงุตูู ุงูุณูุฑ ุฅูู ุจุฑูุฏู ุงูุฅููุชุฑูููุ ูุณูุชุตู ุจู ุฎูุงู 24 ุณุงุนุฉ ุนู…ู.</p>
-      <button class="btn btn-pdf" id="downloadReceiptBtn"><i class="fas fa-file-pdf"></i> ุชุญู…ูู ุงูุฅูุตุงู (PDF)</button>
+      <h2>สใ วแอฬา ศไฬวอ!</h2>
+      <p>สใ อฬา ัอแส฿ ศไฬวอ! ำํสใ ลัำวแ สÝวีํแ วแำÝั ลแ์ ศัํฯ฿ วแลแ฿สัๆไํก ๆำไสีแ ศ฿ ฮแวแ 24 ำวฺษ ฺใแ.</p>
+      <button class="btn btn-pdf" id="downloadReceiptBtn"><i class="fas fa-file-pdf"></i> สอใํแ วแลํีวแ (PDF)</button>
       <div class="progress-container">
          <div class="progress-bar" id="progressBar"></div>
       </div>
@@ -366,35 +366,35 @@ endif; ?>
 <section class="footer">
    <div class="box-container">
       <div class="box">
-         <h3>ุฑูุงุจุท ุณุฑูุนุฉ</h3>
-         <a href="home arabic.php"> <i class="fas fa-angle-left"></i> ุงูุฑุฆูุณูุฉ</a>
-         <a href="about arabic.php"> <i class="fas fa-angle-left"></i> ุนูู‘ุง</a>
-         <a href="package arabic.php"> <i class="fas fa-angle-left"></i> ุงูุนุฑูุถ</a>
-         <a href="book arabic.php"> <i class="fas fa-angle-left"></i> ุงุญุฌุฒ</a>
+         <h3>ัๆวศุ ำัํฺษ</h3>
+         <a href="home arabic.php"> <i class="fas fa-angle-left"></i> วแัฦํำํษ</a>
+         <a href="about arabic.php"> <i class="fas fa-angle-left"></i> ฺไ๘ว</a>
+         <a href="package arabic.php"> <i class="fas fa-angle-left"></i> วแฺัๆึ</a>
+         <a href="book arabic.php"> <i class="fas fa-angle-left"></i> วอฬา</a>
       </div>
       <div class="box">
-         <h3>ุฑูุงุจุท ุฅุถุงููุฉ</h3>
-         <a href="about arabic.php"> <i class="fas fa-angle-left"></i> ู…ุนููู…ุงุช ุนูุง</a>
-         <a href="faq_ar.php"> <i class="fas fa-angle-left"></i> ุงูุฃุณุฆูุฉ ุงูุดุงุฆุนุฉ </a>
-         <a href="terms_ar.php"> <i class="fas fa-angle-left"></i> ุดุฑูุท ุงูุงุณุชุฎุฏุงู…</a>
-         <a href="privacy_ar.php"> <i class="fas fa-angle-left"></i> ุณูุงุณุฉ ุงูุฎุตูุตูุฉ</a>
+         <h3>ัๆวศุ ลึวÝํษ</h3>
+         <a href="about arabic.php"> <i class="fas fa-angle-left"></i> ใฺแๆใวส ฺไว</a>
+         <a href="faq_ar.php"> <i class="fas fa-angle-left"></i> วแรำฦแษ วแิวฦฺษ </a>
+         <a href="terms_ar.php"> <i class="fas fa-angle-left"></i> ิัๆุ วแวำสฮฯวใ</a>
+         <a href="privacy_ar.php"> <i class="fas fa-angle-left"></i> ำํวำษ วแฮีๆีํษ</a>
       </div>
       <div class="box">
-         <h3>ู…ุนููู…ุงุช ุงูุชูุงุตู</h3>
+         <h3>ใฺแๆใวส วแสๆวีแ</h3>
          <a href="#"> <i class="fas fa-phone"></i> +020-000-0000 </a>
          <a href="https://wa.me/+201014130237"> <i class="fab fa-whatsapp"></i> +201014130237 </a>
          <a href="https://mail.google.com"> <i class="fas fa-envelope"></i> example@email.com </a>
-         <a href="https://maps.app.goo.gl/22352352352352352"> <i class="fas fa-map"></i> ุงููุงูุฑุฉุ ู…ุตุฑ  </a>
+         <a href="https://maps.app.goo.gl/22352352352352352"> <i class="fas fa-map"></i> วแÞวๅัษก ใีั  </a>
       </div>
       <div class="box">
-         <h3>ุชุงุจุนูุง</h3>
-         <a href="https://www.facebook.com"> <i class="fab fa-facebook-f"></i> ููุณุจูู </a>
-         <a href="https://www.X.com"> <i class="fab fa-twitter"></i> ุชููุชุฑ </a>
-         <a href="https://www.instagram.com"> <i class="fab fa-instagram"></i> ุฅูุณุชุฌุฑุงู… </a>
-         <a href="https://www.linkedin.com"> <i class="fab fa-linkedin"></i> ููููุฏ ุฅู </a>
+         <h3>สวศฺไว</h3>
+         <a href="https://www.facebook.com"> <i class="fab fa-facebook-f"></i> Ýํำศๆ฿ </a>
+         <a href="https://www.X.com"> <i class="fab fa-twitter"></i> สๆํสั </a>
+         <a href="https://www.instagram.com"> <i class="fab fa-instagram"></i> ลไำสฬัวใ </a>
+         <a href="https://www.linkedin.com"> <i class="fab fa-linkedin"></i> แํไ฿ฯ ลไ </a>
       </div>
    </div>
-   <div class="credit"> ุชู… ุงูุชุตู…ูู… ุจูุงุณุทุฉ <span>ูุฑูู 21</span> | ุฌู…ูุน ุงูุญููู ู…ุญููุธุฉ! </div>
+   <div class="credit"> สใ วแสีใํใ ศๆวำุษ <span>ÝัํÞ 21</span> | ฬใํฺ วแอÞๆÞ ใอÝๆูษ! </div>
 </section>
 
 <!-- footer section ends -->
@@ -487,7 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (promoSection) promoSection.style.display = 'none';
       
       // Update package text
-      if (invoicePackage) invoicePackage.textContent = 'ุทูุจ ู…ุฎุตุต';
+      if (invoicePackage) invoicePackage.textContent = 'ุแศ ใฮีี';
    }
 
    function updateTotalPrice() {
@@ -528,7 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       if (!validationFn(value)) {
          field.classList.add('invalid');
-         errorSpan.textContent = errorMessage || 'ูุฐุง ุงูุญูู ู…ุทููุจ';
+         errorSpan.textContent = errorMessage || 'ๅะว วแอÞแ ใุแๆศ';
          errorSpan.classList.add('active');
          return false;
       } else {
@@ -545,20 +545,20 @@ document.addEventListener('DOMContentLoaded', () => {
    submitBtn.addEventListener('click', (e) => {
       let isValid = true;
 
-      isValid &= validateField('name', 'nameError', isNotEmpty, 'ูุฐุง ุงูุญูู ู…ุทููุจ');
-      isValid &= validateField('email', 'emailError', (v) => isNotEmpty(v) && isValidEmail(v), isNotEmpty(document.getElementById('email').value) ? 'ุชูุณูู ุงูุจุฑูุฏ ุงูุฅููุชุฑููู ุบูุฑ ุตุงูุญ' : 'ูุฐุง ุงูุญูู ู…ุทููุจ');
-      isValid &= validateField('phone', 'phoneError', (v) => isNotEmpty(v) && isValidPhone(v), isNotEmpty(document.getElementById('phone').value) ? 'ูุฌุจ ุฃู ูุชููู ุงููุงุชู ู…ู 11 ุฑูู…ุงู ุจุงูุถุจุท' : 'ูุฐุง ุงูุญูู ู…ุทููุจ');
-      isValid &= validateField('address', 'addressError', isNotEmpty, 'ูุฐุง ุงูุญูู ู…ุทููุจ');
-      isValid &= validateField('location', 'locationError', isNotEmpty, 'ูุฐุง ุงูุญูู ู…ุทููุจ');
-      isValid &= validateField('guests', 'guestsError', isNotEmpty, 'ูุฐุง ุงูุญูู ู…ุทููุจ');
-      isValid &= validateField('arrivals', 'arrivalsError', isNotEmpty, 'ูุฐุง ุงูุญูู ู…ุทููุจ');
+      isValid &= validateField('name', 'nameError', isNotEmpty, 'ๅะว วแอÞแ ใุแๆศ');
+      isValid &= validateField('email', 'emailError', (v) => isNotEmpty(v) && isValidEmail(v), isNotEmpty(document.getElementById('email').value) ? 'สไำํÞ วแศัํฯ วแลแ฿สัๆไํ Ûํั ีวแอ' : 'ๅะว วแอÞแ ใุแๆศ');
+      isValid &= validateField('phone', 'phoneError', (v) => isNotEmpty(v) && isValidPhone(v), isNotEmpty(document.getElementById('phone').value) ? 'ํฬศ รไ ํส฿ๆไ วแๅวสÝ ใไ 11 ัÞใว๐ ศวแึศุ' : 'ๅะว วแอÞแ ใุแๆศ');
+      isValid &= validateField('address', 'addressError', isNotEmpty, 'ๅะว วแอÞแ ใุแๆศ');
+      isValid &= validateField('location', 'locationError', isNotEmpty, 'ๅะว วแอÞแ ใุแๆศ');
+      isValid &= validateField('guests', 'guestsError', isNotEmpty, 'ๅะว วแอÞแ ใุแๆศ');
+      isValid &= validateField('arrivals', 'arrivalsError', isNotEmpty, 'ๅะว วแอÞแ ใุแๆศ');
       isValid &= validateField('leaving', 'leavingError', (v) => {
          if (!isNotEmpty(v)) return false;
          if (arrivalsInput.value && v <= arrivalsInput.value) {
             return false;
          }
          return true;
-      }, isNotEmpty(document.getElementById('leaving').value) ? 'ูุฌุจ ุฃู ูููู ุชุงุฑูุฎ ุงูู…ุบุงุฏุฑุฉ ุจุนุฏ ุชุงุฑูุฎ ุงููุตูู' : 'ูุฐุง ุงูุญูู ู…ุทููุจ');
+      }, isNotEmpty(document.getElementById('leaving').value) ? 'ํฬศ รไ ํ฿ๆไ สวัํฮ วแใÛวฯัษ ศฺฯ สวัํฮ วแๆีๆแ' : 'ๅะว วแอÞแ ใุแๆศ');
 
       if (isValid) {
          // Calculate and Populate Invoice
@@ -596,7 +596,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const payLaterBtn = document.getElementById('bookPayLater');
       payLaterBtn.disabled = true;
-      payLaterBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ุฌุงุฑู ุงูู…ุนุงูุฌุฉ...';
+      payLaterBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ฬวั๒ วแใฺวแฬษ...';
 
       fetch('book_form.php', {
          method: 'POST',
@@ -624,16 +624,16 @@ document.addEventListener('DOMContentLoaded', () => {
                  window.location.href = 'home arabic.php';
              }, 1500);
          } else {
-            alert('ุญุฏุซ ุฎุทุฃ: ' + data.message);
+            alert('อฯห ฮุร: ' + data.message);
             payLaterBtn.disabled = false;
-            payLaterBtn.innerText = 'ุงุญุฌุฒ ูุงุฏูุน ูุงุญูุงู';
+            payLaterBtn.innerText = 'วอฬา ๆวฯÝฺ แวอÞว๐';
          }
       })
       .catch(error => {
          console.error('Error:', error);
-         alert('ุญุฏุซ ุฎุทุฃ ู…ุง ูู ุงูุงุชุตุงู.');
+         alert('อฯห ฮุร ใว Ý์ วแวสีวแ.');
          payLaterBtn.disabled = false;
-         payLaterBtn.innerText = 'ุงุญุฌุฒ ูุงุฏูุน ูุงุญูุงู';
+         payLaterBtn.innerText = 'วอฬา ๆวฯÝฺ แวอÞว๐';
       });
    });
 
@@ -645,11 +645,11 @@ document.addEventListener('DOMContentLoaded', () => {
          const formData = new FormData(bookingForm);
          formData.append('send', 'submit');
          formData.append('payment_status', 'Pending');
-         formData.append('package_name', 'ุทูุจ ู…ุฎุตุต');
+         formData.append('package_name', 'ุแศ ใฮีี');
 
          const reqBtn = document.getElementById('requestBookingBtn');
          reqBtn.disabled = true;
-         reqBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ุฌุงุฑู ุงูู…ุนุงูุฌุฉ...';
+         reqBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ฬวั๒ วแใฺวแฬษ...';
 
          fetch('book_form.php', {
             method: 'POST',
@@ -662,8 +662,8 @@ document.addEventListener('DOMContentLoaded', () => {
                
                const successModal = document.getElementById('successModal');
                // Modify text
-               successModal.querySelector('h2').textContent = 'ุดูุฑุง ูู!';
-               successModal.querySelector('p').textContent = 'ุณูุชูุงุตู ู…ุนู ูุฑูู ุฎุฏู…ุฉ ุงูุนู…ูุงุก ูุฑูุจุงู.';
+               successModal.querySelector('h2').textContent = 'ิ฿ัว แ฿!';
+               successModal.querySelector('p').textContent = 'ำํสๆวีแ ใฺ฿ ÝัํÞ ฮฯใษ วแฺใแวม Þัํศว๐.';
                successModal.classList.add('active');
 
                if (downloadReceiptBtn && data.booking_id) {
@@ -680,16 +680,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'home arabic.php';
              }, 5000);
             } else {
-               alert('ุญุฏุซ ุฎุทุฃ: ' + data.message);
+               alert('อฯห ฮุร: ' + data.message);
                reqBtn.disabled = false;
-               reqBtn.innerText = 'ุทูุจ ุญุฌุฒ';
+               reqBtn.innerText = 'ุแศ อฬา';
             }
          })
          .catch(error => {
             console.error('Error:', error);
-            alert('ุญุฏุซ ุฎุทุฃ ู…ุง ูู ุงูุงุชุตุงู.');
+            alert('อฯห ฮุร ใว Ý์ วแวสีวแ.');
             reqBtn.disabled = false;
-            reqBtn.innerText = 'ุทูุจ ุญุฌุฒ';
+            reqBtn.innerText = 'ุแศ อฬา';
          });
       });
    }
@@ -703,7 +703,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const payBtn = paymentForm.querySelector('.btn-pay');
       payBtn.disabled = true;
-      payBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ุฌุงุฑู ุงูู…ุนุงูุฌุฉ...';
+      payBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ฬวั๒ วแใฺวแฬษ...';
       
       fetch('book_form.php', {
          method: 'POST',
@@ -730,16 +730,16 @@ document.addEventListener('DOMContentLoaded', () => {
                  window.location.href = 'home arabic.php';
               }, 5000);
          } else {
-            alert('ุญุฏุซ ุฎุทุฃ: ' + data.message);
+            alert('อฯห ฮุร: ' + data.message);
             payBtn.disabled = false;
-            payBtn.innerText = 'ุชุฃููุฏ ูุฏูุน';
+            payBtn.innerText = 'สร฿ํฯ ๆฯÝฺ';
          }
       })
       .catch(error => {
          console.error('Error:', error);
-         alert('ุญุฏุซ ุฎุทุฃ ุฃุซูุงุก ู…ุนุงูุฌุฉ ุญุฌุฒู.');
+         alert('อฯห ฮุร รหไวม ใฺวแฬษ อฬา฿.');
          payBtn.disabled = false;
-         payBtn.innerText = 'ุชุฃููุฏ ูุฏูุน';
+         payBtn.innerText = 'สร฿ํฯ ๆฯÝฺ';
       });
    });
 
