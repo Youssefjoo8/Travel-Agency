@@ -100,7 +100,7 @@ if (!isset($_SESSION['user_id'])) {
          color: #fff;
          border-radius: 4px;
          box-sizing: border-box;
-         font-size: 1rem;
+         font-size: 1.1rem;
          transition: border-color 0.3s;
       }
 
